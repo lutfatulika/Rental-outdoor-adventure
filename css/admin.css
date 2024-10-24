@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-align: left;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Main content */
+.home-section {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Simple cards */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 2rem 3rem;
+}
+
+.card h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.card p {
+    margin: 0;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Style for div1 with flexbox and spacing */
+.div1 {
+    background-color: rgb(62, 62, 56);
+    margin: 35px;
+    padding: 10px 20px;
+}
+
+.div1 ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.div1 ul li {
+    margin: 0;
+}
+
+.div1 ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.div1 ul li a:hover {
+    background-color: #575757;
+    color: white;
+}
+
+/* Additional styles for navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.sidebar-button {
+    cursor: pointer;
+}
+
+.profile-details {
+    color: #333;
+}
+
+.logo-details {
+    color: white;
+}
+
+.logo_name {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+/* Reset CSS untuk margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Warna latar belakang */
+}
+
+/* Header */
+header {
+    background-color: #4CAF50; /* Warna latar belakang header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/*penambahan transaction
+
+/* Bagian Form */
+.form-section {
+    max-width: 600px; /* Lebar maksimum untuk form */
+    margin: 20px auto; /* Centering form */
+    background-color: white; /* Warna latar belakang form */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    padding: 20px;
+}
+
+/* Gaya untuk grup form */
+.form-group {
+    margin-bottom: 20px; /* Jarak antar grup */
+}
+
+/* Gaya untuk label */
+label {
+    display: block; /* Membuat label menjadi block */
+    margin-bottom: 5px; /* Jarak bawah */
+    font-weight: bold; /* Menebalkan teks label */
+}
+
+/* Gaya untuk input dan select */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%; /* Lebar penuh */
+    padding: 10px; /* Padding dalam */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Sudut membulat */
+    margin-bottom: 10px; /* Jarak bawah */
+}
+
+/* Gaya untuk tombol submit */
+button[type="submit"] {
+    background-color: #4CAF50; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 15px; /* Padding dalam */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Menunjukkan bahwa ini bisa diklik */
+    transition: background-color 0.3s; /* Transisi warna */
+}
+
+/* Efek hover untuk tombol */
+button[type="submit"]:hover {
+    background-color: #45a049; /* Warna lebih gelap saat hover */
+}
+
+/* Bagian Data Peminjaman dan Pembayaran */
+.data-section {
+    max-width: 600px; /* Lebar maksimum untuk data */
+    margin: 20px auto; /* Centering data */
+    padding: 20px;
+    background-color: white; /* Warna latar belakang data */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+/* Gaya untuk setiap item data */
+.loan-payment-item {
+    border-bottom: 1px solid #ccc; /* Garis bawah untuk pemisah */
+    padding: 10px 0; /* Jarak atas dan bawah */
+}
+
+.loan-payment-item:last-child {
+    border-bottom: none; /* Menghilangkan garis bawah pada item terakhir */
+}
+
+/* Gaya teks di dalam data */
+.loan-payment-item strong {
+    display: block; /* Membuat judul menjadi block */
+    margin-bottom: 5px; /* Jarak bawah */
+    color: #4CAF50; /* Warna hijau */
+}

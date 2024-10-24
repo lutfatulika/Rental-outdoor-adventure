@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Transaction page for Adventure Rentaliks" />
+    <title>Transaction - Adventure Rentaliks</title>
+    <link rel="stylesheet" href="css/admin.css"> <!-- Adjust the path as needed -->
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="bx bx-category"></i>
+            <span class="logo_name">Adventure Rentaliks</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="../categories/categories.html">
+                    <i class="bx bx-box"></i>
+                    <span class="links_name">Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="transaction.html" class="active">
+                    <i class="bx bx-list-ul"></i>
+                    <span class="links_name">Transaction</span>
+                </a>
+            </li>
+            <li>
+                <a href="../reports/reports.html">
+                    <i class="bx bx-list-ul"></i>
+                    <span class="links_name">Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-log-out"></i>
+                    <span class="links_name">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!--penambahan transaction -->
+        <section class="form-section">
+            <form id="loanPaymentForm">
+                <div class="form-group">
+                    <h3>Informasi Peminjaman</h3>
+                    <label for="name">Nama Lengkap:</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+    
+                    <label for="phone">Nomor Telepon:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon" required>
+    
+                    <label for="equipment">Alat yang Dipinjam:</label>
+                    <select id="equipment" name="equipment" required>
+                        <option value="">--Pilih Alat--</option>
+                        <option value="Tenda">Tenda</option>
+                        <option value="Sleeping Bag">Sleeping Bag</option>
+                        <option value="Carrier">Carrier</option>
+                        <option value="Kompor Portable">Kompor Portable</option>
+                        <option value="Tracking Pole">Tracking Pole</option>
+                    </select>
+    
+                    <label for="duration">Durasi Peminjaman (Hari):</label>
+                    <input type="number" id="duration" name="duration" min="1" placeholder="Masukkan durasi" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="paymentMethod">Metode Pembayaran:</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">--Pilih Metode Pembayaran--</option>
+                        <option value="Transfer Bank">Transfer Bank</option>
+                        <option value="Kartu Kredit">Kartu Kredit</option>
+                        <option value="E-Wallet">E-Wallet</option>
+                    </select>
+    
+                    <label for="totalAmount">Total Pembayaran (Rp):</label>
+                    <input type="number" id="totalAmount" name="totalAmount" placeholder="Masukkan total pembayaran" required>
+                </div>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    
+        <section class="data-section">
+            <h2>Data Peminjaman dan Pembayaran Tersimpan</h2>
+            <div id="loanPaymentData"></div>
+        </section>
+    
+        <script src="rental.js"></script>    
+    </script>
+</body>
+
+</html>
