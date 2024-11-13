@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style2.css" />
+</head>
+
+<body>
+  <div id="login-page" class="container">
+    <div class="login-container">
+      <div class="logo-img"></div>
+      <div class="login-wrapper">
+        <h2>Login</h2>
+        <form id="myForm">
+          <div class="input-group">
+            <label for="email-login">Email:</label>
+            <input type="email" id="email-login" name="email-login" required />
+          </div>
+          <div class="input-group">
+            <label for="password-login">Password:</label>
+            <input type="password" id="password-login" name="password-login" required />
+          </div>
+          <a href="register.html" class="forgot-password">Belum punya akun?</a>
+          <div class="input-group">
+            <button type="button" id="loginButton">Login</button>
+          </div>
+        </form>
+        <div class="google-login">
+          <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-586960051%3A1695717102667901&theme=glif">
+            <img src="logogoogle.png" alt="Login dengan Google" /> Masuk dengan Google
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script>
+      // Ambil elemen tombol login
+      var loginButton = document.getElementById('loginButton');
+
+      // Tambahkan Event Listener untuk klik pada tombol login
+      loginButton.addEventListener('click', function () {
+        showConfirmBox(); // Tampilkan Confirm Box
+      });
+
+      // Fungsi untuk menampilkan Confirm Box
+      function showConfirmBox() {
+        var confirmation = confirm('Apakah Anda yakin ingin melanjutkan login?');
+        if (confirmation) {
+          login(); // Panggil fungsi login jika pengguna menekan "OK"
+        } else {
+          alert('Login dibatalkan.'); // Jika pengguna menekan "Cancel"
+        }
+      }
+
+      // Fungsi login
+      function login() {
+        // Ambil data dari form
+        var email = document.getElementById('email-login').value;
+        var password = document.getElementById('password-login').value;
+
+        // Validasi jika email atau password kosong
+        if (email === "" || password === "") {
+          alert('Email dan password tidak boleh kosong!'); // Popup sederhana
+          return;
+        }
+
+        // menyimpan email dan password ke localStorage
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
+
+        // Popup login berhasil
+        alert('Login Berhasil');
+      }
+    </script>
+</body>
+
+</html>
