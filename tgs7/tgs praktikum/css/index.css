@@ -1,0 +1,350 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3e7035;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo::before {
+    content: "";
+    background-image: url('assets/photos/ft gunung.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 5px;
+    width: 100px;
+    margin-right: 7px;
+}
+
+.account-icon,
+.cart-icon {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    background-color: #87e68b;
+    color: white;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.product-categories,
+.new-products,
+.user-testimonials {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-categories h2,
+.new-products h2,
+.user-testimonials h2 {
+    margin-bottom: 20px;
+}
+
+.category {
+    display: inline-block;
+    margin: 10px;
+}
+
+.category img {
+    width: 150px;
+    height: 150px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-list {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.product-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.product-item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+    width: 22%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 150px;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-item .game-type {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.product-item .price {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-item .rating {
+    font-size: 14px;
+    color: #ff9800;
+}
+
+.promotion-banner {
+    background-color: #ff9800;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+/* Kelas untuk efek berpendar */
+.glow {
+    animation: glow 1s ease-in-out infinite alternate;
+    border-radius: 10px;
+}
+
+/* Efek animasi berpendar di sekitar gambar */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(244, 10, 10, 0.66), 0 0 15px rgba(255, 4, 4, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(255, 68, 68, 0.7), 0 0 30px rgba(255, 44, 44, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(240, 71, 71, 0.532), 0 0 15px rgba(249, 47, 47, 0.568);
+    }
+}
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    .main-banner {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .promo-banner {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .slider img {
+        max-height: 200px;
+    }
+
+    .product-item {
+        width: 90%;
+    }
+
+    .category img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Styles for larger screens */
+@media only screen and (min-width: 769px) {
+    .product-item {
+        width: 22%;
+    }
+
+    .category img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .main-banner {
+        padding: 70px;
+    }
+
+    #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        /* ganti warna background notif */
+        background-color: #68ad82;
+        /* ganti warna font notif */
+        color: #fff;
+        /* atur text di tengah */
+        text-align: center;
+        /* atur lengkungan kotak notif */
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 17px;
+    }
+
+    #snackbar.show {
+        visibility: visible;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+        .product-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        .header-right {
+            flex-direction: column;
+        }
+
+        .header-right input {
+            margin-bottom: 10px;
+        }
+    }
+}
