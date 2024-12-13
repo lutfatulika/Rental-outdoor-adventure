@@ -1,0 +1,96 @@
+/* Reset gaya default browser */
+body,
+h2,
+form,
+input,
+select,
+label,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Kontainer form */
+.form-container {
+    background-color: #ddd;
+    border-color: #555;
+    padding: 40px 160px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 40%;
+}
+
+/* Judul form */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Gaya untuk label */
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Gaya untuk input dan select */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Gaya untuk input readonly */
+input[readonly] {
+    background-color: #f9f9f9;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Gaya untuk tombol submit */
+button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover efek untuk tombol */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya untuk ikon (opsional jika diimplementasikan nanti) */
+.icon-barang {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
